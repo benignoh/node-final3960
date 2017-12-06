@@ -57,7 +57,7 @@ exports.getToken = function(request,response)   {
     let payload = { };
       
     // Reserved claims (metadata of the JWT)
-    payload.iat = jsrsasign.jws.IntDate.get('now'); 
+    payload.iat = r.jws.IntDate.get('now'); 
     payload.user = userReq;
     payload.pass = passReq;
     // Private claims (our info we want to send)
